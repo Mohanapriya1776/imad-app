@@ -6,10 +6,10 @@ var button=document.getElementById('counter');
 
 button.onclick=function(){
     
-    var request=new HMLHttpRequest();
+    var request=new XMLHttpRequest();
     
     request.onreadystatechange=function(){
-        if(request.readyState===HMLHttpRequest.DONE)
+        if(request.readyState===XMLHttpRequest.DONE)
         {
             //Take some action
             
