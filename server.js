@@ -10,7 +10,9 @@ var articleOne={
     title:'ArticleOne',
     heading:'ArticleOne',
     date:'Sep 5 2016',
-    content:`<h1>This is articleOne created in server.js<h1>`
+    content:`<h1>This is articleOne created in server.js<h1>
+    <p>Content</p>
+    `
     
 }
 
