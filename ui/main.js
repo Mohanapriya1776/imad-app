@@ -29,3 +29,29 @@ button.onclick=function(){
     request.send(null);
     
 };
+
+//Submit Name
+
+var submit=document.getElementById("submit_btn");
+
+submit.onclick=function()
+{
+    // var nameInput=document.getElementById("name");
+    // var name=nameInput.value();
+    
+   
+    var names=["name1","name2"];
+    
+    var list='';
+    
+    for(i=0;i<names.length;i++)
+    {
+        list+='<li>'+names[i]+'<li>'
+    }
+    
+    var namelist=document.getElementById("namelist");
+    
+    namelist.innerHTML(list);
+    
+    
+};
