@@ -36,11 +36,12 @@ var submit=document.getElementById("submit_button");
 
 submit.onclick=function()
 {
-     /*var nameInput=document.getElementById("name");
-     var name=nameInput.value;*/
-    
+     var nameInput=document.getElementById("name");
+     var name=nameInput.value;
+     request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/submit_name/:name?name',true);
+    request.send(null);
    
-    var names=['name1','name2'];
+   /* var names=['name1','name2'];*/
     
     var list='';
     
