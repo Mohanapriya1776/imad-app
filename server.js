@@ -71,7 +71,7 @@ app.get('/submit_name/:name', function (req, res) {
     
     name=req.params.name;
     names.push(name);
-    res.send(JSON.stringfy(names));
+    res.send(JSON.stringify(names));
     
     
   res.send(CreateTemplate(articleOne));
