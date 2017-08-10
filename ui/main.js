@@ -40,13 +40,13 @@ submit.onclick=function()
      var name=nameInput.value;*/
     
    
-    var names=["name1","name2"];
+    var names=['name1','name2'];
     
     var list='';
     
-    for(i=0;i<names.length;i++)
+    for(var i=0;i<names.length;i++)
     {
-        list+='<li>'+names[i]+'<li>'
+        list+='<li>'+names[i]+'<li>';
     }
     
     var namelist=document.getElementById("namelist");
