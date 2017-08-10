@@ -40,6 +40,8 @@ submit.onclick=function()
      var name=nameInput.value;
      request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/submit_name/:name?name',true);
     request.send(null);
+       var names=request.responseText;
+   names=JSON.parse(names);
    
    /* var names=['name1','name2'];*/
     
