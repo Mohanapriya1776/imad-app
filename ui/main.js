@@ -36,8 +36,8 @@ var submit=document.getElementById("submit_button");
 
 submit.onclick=function()
 {
-     var nameInput=document.getElementById("name");
-     var name=nameInput.value;
+     /*var nameInput=document.getElementById("name");
+     var name=nameInput.value;*/
     
    
     var names=["name1","name2"];
