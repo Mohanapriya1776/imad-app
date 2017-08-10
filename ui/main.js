@@ -39,7 +39,7 @@ submit.onclick=function()
      var nameInput=document.getElementById("name");
      var name=nameInput.value;
       var request=new XMLHttpRequest();
-     request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/submit_name?name'+name,true);
+     request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/submit_name?name='+name,true);
     request.send(null);
    
    
