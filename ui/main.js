@@ -38,12 +38,20 @@ submit.onclick=function()
 {
      var nameInput=document.getElementById("name");
      var name=nameInput.value;
+      var request=new XMLHttpRequest();
      request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/submit_name?name'+name,true);
     request.send(null);
-       var names=request.responseText;
-   names=JSON.parse(names);
+   
    
    /* var names=['name1','name2'];*/
+     request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+            //Take some action
+            
+            if(request.status===200){
+                    var names=request.responseText;
+   names=JSON.parse(names);
     
     var list='';
     
@@ -57,4 +65,7 @@ submit.onclick=function()
     namelist.innerHTML=list;
     
     
+};
+}
+}
 };
