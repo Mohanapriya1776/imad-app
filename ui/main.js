@@ -51,7 +51,7 @@ submit.onclick=function()
     
     var namelist=document.getElementById("namelist");
     
-    //namelist.innerHTML=list;
+    namelist.innerHTML=list;
     
     
 };
