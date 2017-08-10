@@ -65,7 +65,7 @@ submit.onclick=function()
     namelist.innerHTML=list;
     
     
+}
+}
 };
-}
-}
 };
