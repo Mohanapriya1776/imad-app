@@ -32,7 +32,7 @@ button.onclick=function(){
 
 //Submit Name
 
-var submit=document.getElementById("submit_btn");
+var submit=document.getElementById("submit_button");
 
 submit.onclick=function()
 {
