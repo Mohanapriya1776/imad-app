@@ -96,7 +96,7 @@ app.get('/counter', function (req, res) {
 
 app.get('article/:articleName', function (req, res) {
     
-    pool.query("SELECT * from articletypes where title='"+req.params.articleName +"'",function(err,result)
+    pool.query("SELECT * from articletypes WHERE title='"+req.params.articleName +"'",function(err,result)
     {
         if(err)
         {
