@@ -109,7 +109,7 @@ app.get('/article/:articleName', function (req, res) {
         
         else
         {
-            var articleData=result.rows[0];
+            var articleData=result.rows;
            res.send(CreateTemplate(articleData));
         }
     }
