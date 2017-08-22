@@ -90,11 +90,9 @@ app.get('/counter', function (req, res) {
 
 
 
-/*app.get('/article-one', function (req, res) {
-  res.send(CreateTemplate(articleOne));
-});*/
 
-app.get('article/:articleName', function (req, res) {
+
+app.get('/article/:articleName', function (req, res) {
     
     pool.query("SELECT * from articletypes WHERE title='"+req.params.articleName +"'",function(err,result)
     {
@@ -119,6 +117,10 @@ app.get('article/:articleName', function (req, res) {
 });
 });
 
+
+/*app.get('/article-one', function (req, res) {
+  res.send(CreateTemplate(articleOne));
+});*/
 var names=[];
 app.get('/submit_name', function (req, res) {
     
