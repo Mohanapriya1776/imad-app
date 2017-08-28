@@ -69,7 +69,7 @@ app.get('/', function (req, res) {
 
 function hash(input,salt)
 {
-   var key = crypto.pbkdf2Sync('input', 'salt', 100000, 512, 'sha512');
+   var key = crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
    /*return key.toString('hex');*/
    return ["pbkdf2","10000",salt,key.toString('hex')].join('$');
 }
