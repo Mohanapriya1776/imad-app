@@ -100,7 +100,7 @@ submit.onclick=function()
     };
     //Make the request
        request.setRequestHeader('Content-Type', 'application/json');
-      request.send("{'username':'John Rambo', 'password':'pwd'}");
+      request.send('{"username":"John Rambo", "password":"pwd"}');
     
   
 
