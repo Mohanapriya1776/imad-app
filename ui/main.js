@@ -103,7 +103,7 @@ submit.onclick=function()
       
       
      
-    $.ajax({
+  /*  $.ajax({
 url:'/create-user',
 contentType: "application/json",
 data:'{"username":"praise","password":"praise"}',
@@ -111,7 +111,7 @@ type:'POST',
 success:function(data){
   console.log(data);
 }
-});
+});*/
 
 
 
