@@ -79,7 +79,7 @@ submit.onclick=function()
 
 
     
-  var request=new XMLHttpRequest();
+ /* var request=new XMLHttpRequest();
   request.open('POST','http://mohanapriyasubramaniam.imad.hasura-app.io/create-user',true);
   request.setRequestHeader('Content-Type', 'application/json');
   request.send('{"username":"Priya", "password":"pwd"}');
@@ -99,15 +99,17 @@ submit.onclick=function()
         }
         //Not done yet
     };
-    //Make the request
+    //Make the request*/
       
       
-     /* 
-      $(ajax)
-      {
-     url:'/create-user',
-     data:'{"username":"Priya", "password":"pwd"}',
-     type:'POST'
-    */
-  
+     
+    $.ajax({
+url:'/create-user',
+contentType: "application/json",
+data:'{"username":"priya","password":"password"}',
+type:'POST',
+success:function(data){
+  console.log('success');
+}
+});
 
