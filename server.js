@@ -70,7 +70,8 @@ app.get('/', function (req, res) {
 function hash(input,salt)
 {
    var key = crypto.pbkdf2Sync('input', 'salt', 100000, 512, 'sha512');
-   return key.toString('hex');
+   /*return key.toString('hex');*/
+   return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
 }
  
 //hash->to secure password
@@ -100,6 +101,45 @@ app.post('/create-user',function(req,res)
         {
             res.send("User Successfully Created"+username);
         }
+   });
+});
+
+
+app.post('/login',function(req,res)
+{
+    //JSON
+    //{"username":"priya","password":qwe"}
+   var username=req.body.username;
+   var password=req.body.password;
+   console.log(username);
+ 
+   pool.query('SELECT * FROM  hash WHERE username=$1',[username],function(err,result){
+         if(err)
+        {
+            res.status(500).send(err.toString());
+            
+        }
+        else
+        {
+            if(result.rows.length==0){
+            res.status(403).send("username/password is invalid");
+            }
+        
+        else
+        {
+            var dbString=result.rows[0].password;
+          var salt=dbString.split('$')[2];
+          var hashedPassword=hash(password,salt);
+          if(hashedPassword===dbString)
+          {
+              res.send('credentials correct');
+              else
+              {
+                   res.status(403).send("username/password is invalid");
+              }
+          }
+        }
+    }
    });
 });
 
