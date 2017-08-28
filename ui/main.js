@@ -82,7 +82,7 @@ submit.onclick=function()
     var request=new XMLHttpRequest();
     request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/create-user',true);
 
-    request.setRequestHeader('Content-Type', 'application/json');
+  
     
     request.onreadystatechange=function(){
         if(request.readyState===XMLHttpRequest.DONE)
@@ -99,7 +99,7 @@ submit.onclick=function()
         //Not done yet
     };
     //Make the request
-     
+       request.setRequestHeader('Content-Type', 'application/json');
       request.send("{'username':'John Rambo', 'password':'pwd'}");
     
   
