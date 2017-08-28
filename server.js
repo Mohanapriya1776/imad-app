@@ -110,7 +110,7 @@ app.post('/login',function(req,res)
     //JSON
     //{"username":"priya","password":qwe"}
    var username=req.body.username;
-   var password=req.body.password;
+   var pass=req.body.password;
    console.log("user"+username);
    console.log("userpwd"+password);
  
@@ -128,10 +128,10 @@ app.post('/login',function(req,res)
         
         else
         {
-            var dbString=result.rows[0].password;
-            console.log("result"+result.rows[0].password);
+          var dbString=result.rows[0].password;
+          console.log("result"+result.rows[0].password);
           var salt=dbString.split('$')[2];
-          var hashedPassword=hash(password,salt);
+          var hashedPassword=hash(pass,salt);
           if(hashedPassword===dbString)
           {
               res.send('credentials correct');
