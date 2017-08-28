@@ -80,8 +80,7 @@ submit.onclick=function()
 
     
     var request=new XMLHttpRequest();
-      request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/create-user',true);
-      request.send(JSON.stringify({username:"John Rambo", password:"pwd"}));
+    request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/create-user',true);
 
     request.setRequestHeader('Content-Type', 'application/json');
     
@@ -100,6 +99,8 @@ submit.onclick=function()
         //Not done yet
     };
     //Make the request
+     
+      request.send(JSON.stringify({username:"John Rambo", password:"pwd"}));
     
   
 
