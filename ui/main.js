@@ -81,10 +81,8 @@ document.ready(function(){
     
     var request=new XMLHttpRequest();
       request.open('POST','http://mohanapriyasubramaniam.imad.hasura-app.io/create-user',true);
-   request.send({
-    "username" : "priya",
-    "password" : "qwe",
-});
+      request.send(JSON.stringify({username:"John Rambo", password:"pwd"}));
+
     request.setRequestHeader('Content-Type', 'application/json');
     
     request.onreadystatechange=function(){
