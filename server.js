@@ -122,7 +122,7 @@ app.post('/login',function(req,res)
         }
         else
         {
-            if(result.rows.length==0){
+            if(result.rows.length===0){
             res.status(403).send("username/password is invalid");
             }
         
@@ -136,14 +136,13 @@ app.post('/login',function(req,res)
           {
               res.send('credentials correct');
              
-          }
-              else
+          } else
               {
                    res.status(403).send("username/password is invalid");
               }
           }
         }
-    
+   
    });
 });
 
