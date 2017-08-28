@@ -65,7 +65,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-function hash(input)
+function hash(input,salt)
 {
    var key = crypto.pbkdf2Sync('input', 'salt', 100000, 512, 'sha512');
    return key.toString('hex');
