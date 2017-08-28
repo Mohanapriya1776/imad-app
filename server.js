@@ -88,7 +88,7 @@ app.post('/create-user',function(req,res)
     //{"username":"priya","password":qwe"}
    var username=req.body.username;
    var password=req.body.password;
-   console.log(username);
+   //console.log(username);
    var salt=crypto.randomBytes(128).toString('hex');
    var dbString=hash(password,salt);
    pool.query('INSERT INTO hash(username,password) VALUES ($1,$2)',[username,dbString],function(err,result){
@@ -111,7 +111,7 @@ app.post('/login',function(req,res)
     //{"username":"priya","password":qwe"}
    var username=req.body.username;
    var password=req.body.password;
-   console.log(username);
+   console.log("user"+username);
  
    pool.query('SELECT * FROM  hash WHERE username=$1',[username],function(err,result){
          if(err)
