@@ -69,3 +69,40 @@ submit.onclick=function()
 }
 };
 };
+
+
+
+//usrname,password
+
+
+
+
+document.ready(function(){
+    
+    var request=new XMLHttpRequest();
+      request.open('POST','http://mohanapriyasubramaniam.imad.hasura-app.io/create-user',true);
+   request.send({
+    "username" : "priya",
+    "password" : "qwe",
+});
+    request.setRequestHeader('Content-Type', 'application/json');
+    
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+            //Take some action
+            
+            if(request.status===200){
+                var counter=request.responseText;
+               
+                
+            }
+            
+        }
+        //Not done yet
+    };
+    //Make the request
+    
+  
+    
+});
