@@ -124,9 +124,10 @@ submit.onclick=function()
     alert("hi");
      var nameInput=document.getElementById("username");
      var name=nameInput.value;
-     
+     alert(name);
      var pwdInput=document.getElementById("pwd");
      var pwd=pwdInput.value;
+     alert(pwd);
      
    $.ajax({
 url:'/login',
