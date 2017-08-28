@@ -109,7 +109,7 @@ contentType: "application/json",
 data:'{"username":"krish","password":"pwd"}',
 type:'POST',
 success:function(data){
-  console.log('data');
+  console.log(data);
 }
 });
 
