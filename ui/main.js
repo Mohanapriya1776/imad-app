@@ -100,7 +100,7 @@ submit.onclick=function()
     };
     //Make the request
      
-      request.send(JSON.stringify({username:"John Rambo", password:"pwd"}));
+      request.send("{'username':'John Rambo', 'password':'pwd'}");
     
   
 
