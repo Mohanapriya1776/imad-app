@@ -77,7 +77,7 @@ submit.onclick=function()
 
 
 
-document.ready(function(){
+
     
     var request=new XMLHttpRequest();
       request.open('GET','http://mohanapriyasubramaniam.imad.hasura-app.io/create-user',true);
@@ -102,5 +102,4 @@ document.ready(function(){
     //Make the request
     
   
-    
-});
+
