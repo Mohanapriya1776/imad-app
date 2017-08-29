@@ -141,9 +141,9 @@ app.post('/login',function(req,res)
           if(hashedPassword===dbString)
           {
               //Set the Session
-              //req.session.auth={userId=result.rows[0].id};
+              req.session.auth={userId:result.rows[0].id};
               //set cookies wth session id
-              //internally it maps userid and sed it with response
+              //internally it maps userid and set it with response
               
               res.send('credentials correct');
              
@@ -163,6 +163,10 @@ app.get('/check-login',function(req,res)
    if(req.session&&req.session.auth&&req.session.auth.userId)
    {
        res.send("You are logged in"+req.session.auth.userId.toString());
+   }
+   else
+   {
+       res.send('You are not logged in');
    }
 });
 
