@@ -157,7 +157,7 @@ app.post('/login',function(req,res)
    });
 });
 
-
+//check session login
 app.get('/check-login',function(req,res)
 {
    if(req.session&&req.session.auth&&req.session.auth.userId)
@@ -169,6 +169,16 @@ app.get('/check-login',function(req,res)
        res.send('You are not logged in');
    }
 });
+
+//session logout
+
+app.get('/logout',function(req,res)
+{
+    delete req.session.auth;
+    res.send("Logged out succesfully");
+});
+
+
 
 var pool=new Pool(config);
 app.get('/test-db',function(req,res){
