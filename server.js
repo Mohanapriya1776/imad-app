@@ -141,7 +141,7 @@ app.post('/login',function(req,res)
           if(hashedPassword===dbString)
           {
               //Set the Session
-              req.session.auth={userId=result.rows[0].id};
+              //req.session.auth={userId=result.rows[0].id};
               //set cookies wth session id
               //internally it maps userid and sed it with response
               
